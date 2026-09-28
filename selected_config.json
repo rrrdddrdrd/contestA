@@ -1,0 +1,61 @@
+{
+  "random_state": 42,
+  "models": [
+    {
+      "name": "advanced_cb_3",
+      "features": "advanced",
+      "kind": "catboost",
+      "params": {
+        "iterations": 1200,
+        "depth": 6,
+        "l2_leaf_reg": 12,
+        "learning_rate": 0.03
+      }
+    }
+  ],
+  "weights": [
+    1.0
+  ],
+  "temporal_cv": {
+    "names": [
+      "advanced_cb_3"
+    ],
+    "mean_precision": 0.7111436717853129,
+    "fold_metrics": [
+      {
+        "precision_at_recall_0.7": 0.6896551724137931,
+        "pr_auc_average_precision": 0.7412343334888936,
+        "roc_auc": 0.9285992968661722,
+        "n_cookies": 2556,
+        "n_bots": 199,
+        "bot_prevalence": 0.07785602503912363
+      },
+      {
+        "precision_at_recall_0.7": 0.6954314720812182,
+        "pr_auc_average_precision": 0.7667753594238352,
+        "roc_auc": 0.9413396609529207,
+        "n_cookies": 2367,
+        "n_bots": 195,
+        "bot_prevalence": 0.08238276299112801
+      },
+      {
+        "precision_at_recall_0.7": 0.7483443708609272,
+        "pr_auc_average_precision": 0.7640984014195359,
+        "roc_auc": 0.9342895030709101,
+        "n_cookies": 1951,
+        "n_bots": 160,
+        "bot_prevalence": 0.08200922603792926
+      }
+    ],
+    "pooled": {
+      "precision_at_recall_0.7": 0.7047101449275363,
+      "pr_auc_average_precision": 0.7559563053657415,
+      "roc_auc": 0.9341894964127406,
+      "n_cookies": 6874,
+      "n_bots": 554,
+      "bot_prevalence": 0.08059354087867326
+    }
+  },
+  "validation_status": "all three temporal folds used for selecting features, parameters and ensemble; no new untouched holdout",
+  "hidden_test_precision_at_recall_0.7": 0.74483
+}
